@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         firstNumber = Integer.parseInt(firstNumberInput.getText().toString());
         secondNumber = Integer.parseInt(secondNumberInput.getText().toString());
         int result = firstNumber + secondNumber;
-        System.out.println("Tässä toimii.");
         textOutput.setText(Integer.toString(result));
     }
 
@@ -37,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         firstNumber = Integer.parseInt(firstNumberInput.getText().toString());
         secondNumber = Integer.parseInt(secondNumberInput.getText().toString());
         int result = firstNumber - secondNumber;
-        System.out.println("Tässä toimii.");
         textOutput.setText(Integer.toString(result));
     }
 
@@ -45,15 +43,13 @@ public class MainActivity extends AppCompatActivity {
         firstNumber = Integer.parseInt(firstNumberInput.getText().toString());
         secondNumber = Integer.parseInt(secondNumberInput.getText().toString());
         int result = firstNumber * secondNumber;
-        System.out.println("Tässä toimii.");
         textOutput.setText(Integer.toString(result));
     }
 
     public void quotientCalculation(View view){
         firstNumber = Integer.parseInt(firstNumberInput.getText().toString());
         secondNumber = Integer.parseInt(secondNumberInput.getText().toString());
-        int result = firstNumber / secondNumber;
-        System.out.println("Tässä toimii.");
-        textOutput.setText(Integer.toString(result));
+        float result = Float.parseFloat(String.valueOf(firstNumber)) / Float.parseFloat(String.valueOf(secondNumber));
+        textOutput.setText(Float.toString(result));
     }
 }
