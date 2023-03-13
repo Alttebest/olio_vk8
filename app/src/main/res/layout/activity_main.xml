@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editFirstNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="Ensimmäinen numero"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editSecondNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Toinen numero"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFirstNumber" />
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="-45dp"
+        android:onClick="plusCalculation"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="@+id/editSecondNumber"
+        app:layout_constraintTop_toTopOf="@+id/buttonMinus" />
+
+    <Button
+        android:id="@+id/buttonMinus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:onClick="minusCalculation"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@+id/buttonPlus"
+        app:layout_constraintTop_toBottomOf="@+id/editSecondNumber" />
+
+    <Button
+        android:id="@+id/buttonProduct"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:onClick="ProductCalculation"
+        android:text="X"
+        app:layout_constraintStart_toEndOf="@+id/buttonMinus"
+        app:layout_constraintTop_toTopOf="@+id/buttonMinus" />
+
+    <Button
+        android:id="@+id/buttonQuotient"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:onClick="quotientCalculation"
+        android:text="/"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonProduct"
+        app:layout_constraintTop_toTopOf="@+id/buttonProduct" />
+
+    <TextView
+        android:id="@+id/textOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Vastaus"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
+</androidx.constraintlayout.widget.ConstraintLayout>
