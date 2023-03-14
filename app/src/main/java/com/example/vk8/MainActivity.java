@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         firstNumberInput = findViewById(R.id.editFirstNumber);
         secondNumberInput = findViewById(R.id.editSecondNumber);
         textOutput = findViewById(R.id.textOutput);
-
     }
 
     public void plusCalculation(View view){
@@ -49,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     public void quotientCalculation(View view){
         firstNumber = Integer.parseInt(firstNumberInput.getText().toString());
         secondNumber = Integer.parseInt(secondNumberInput.getText().toString());
-        float result = Float.parseFloat(String.valueOf(firstNumber)) / Float.parseFloat(String.valueOf(secondNumber));
+        float result = (float) firstNumber / secondNumber;
         textOutput.setText(Float.toString(result));
     }
 }
